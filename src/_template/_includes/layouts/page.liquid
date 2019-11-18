@@ -1,11 +1,9 @@
 ---
-permalink: "pages/{{page.fileSlug }}.json"
+permalink: "pages/{{page.fileSlug }}/index.json"
 ---
 {
   "title": "{{ title }}",
   "date": "{{ page.date | dateToISO }}",
   "slug": "{{page.fileSlug }}",
-  "categories" : [],
-  "tags": [],
   "content": {{ content | jsonify }}
 }

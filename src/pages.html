@@ -1,0 +1,17 @@
+---
+permalink: "pages/index.json"
+templateEngineOverride: liquid
+---
+[
+{% for post in collections.pages  %}
+
+    {
+    "title": "{{ post.data.title }}",
+    "date": "{{ post.date | dateToISO }}",
+    "slug": "{{ post.fileSlug }}",
+    "url": "{{ post.url  }}",
+    "content": {{post.templateContent | jsonify }}
+    }
+    {% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

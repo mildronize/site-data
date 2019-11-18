@@ -60,7 +60,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
-
+  eleventyConfig.addCollection("pages", require("./_11ty/getPageList"));
 
    /* Begin Markdown Plugins */
    let markdownIt = require("markdown-it");

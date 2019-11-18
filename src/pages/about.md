@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /{{ title | slug }}/index.html
 ---
 
 <h1 class="page-title">About Me</h1>

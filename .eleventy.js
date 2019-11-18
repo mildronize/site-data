@@ -50,6 +50,12 @@ module.exports = function(eleventyConfig) {
     return JSON.stringify(object);
   });
 
+
+  eleventyConfig.addFilter('reverse', (array) => {
+    return array.reverse();
+  });
+
+
    // Get the first `n` elements of a collection.
    eleventyConfig.addFilter("head", (array, n) => {
     if( n < 0 ) {

@@ -1,11 +1,26 @@
 ---
-permalink: "posts/{{page.fileSlug }}.json"
+permalink: "posts/{{page.fileSlug }}/index.json"
 ---
+
 {
   "title": "{{ title }}",
   "date": "{{ page.date | dateToISO }}",
   "slug": "{{page.fileSlug }}",
-  "categories" : [],
-  "tags": [],
+  "categories" : [
+  {% for category in categories %}
+            {% if category != "posts" %}
+                { "name": "{{ category }}", "slug": "{{ category | url }}"}
+                {% unless forloop.last %},{% endunless %}
+            {% endif %}
+        {% endfor %}
+    ],
+    "tags": [  
+    {% for tag in tags %}
+    {% if tag != "posts" %}
+        { "name": "{{ tag }}", "slug": "{{ tag | url }}"}
+        {% unless forloop.last %},{% endunless %}
+    {% endif %}
+{% endfor %}
+    ],
   "content": {{ content | jsonify }}
 }

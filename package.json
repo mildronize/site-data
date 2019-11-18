@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
-    "eleventy:default": "cross-env ELEVENTY_ENV=production node --max-old-space-size=4096 ./node_modules/@11ty/eleventy/cmd.js --quiet",
-    "eleventy:watch": "cross-env ELEVENTY_ENV=development eleventy --watch",
-    "eleventy:dev": "cross-env ELEVENTY_ENV=development eleventy",
+    "eleventy:default": "cross-env ELEVENTY_ENV=prod node --max-old-space-size=4096 ./node_modules/@11ty/eleventy/cmd.js --quiet",
+    "eleventy:watch:json": "cross-env ELEVENTY_ENV=prod eleventy --watch",
+    "eleventy:watch": "cross-env ELEVENTY_ENV=dev eleventy --watch",
+    "eleventy:dev": "cross-env ELEVENTY_ENV=dev eleventy",
     "serve": "light-server -c .lightserverrc",
-    "dev": "npm-run-all clean eleventy:dev --parallel eleventy:watch serve --print-label",
+    "dev": "npm-run-all clean eleventy:default --parallel eleventy:watch serve --print-label",
+    "dev-json": "npm-run-all clean eleventy:dev --parallel eleventy:watch:json serve --print-label",
     "dev:debug": "DEBUG=* npm run dev",
     "build": "run-s clean eleventy:default --print-label"
   },
@@ -31,7 +33,6 @@
     "light-server": "^2.6.3",
     "luxon": "^1.12.0",
     "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.0.2",
     "markdown-it-attrs": "^3.0.1",
     "npm-run-all": "^4.1.5"
   },

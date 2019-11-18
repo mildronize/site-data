@@ -6,6 +6,11 @@ const zone = 'Asia/Bangkok';
 module.exports = function(eleventyConfig) {
   const env = process.env.ELEVENTY_ENV;
 
+
+  eleventyConfig.setLiquidOptions({
+    dynamicPartials: true
+  });
+
   console.log(`Run with ${env}`);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -16,10 +21,13 @@ module.exports = function(eleventyConfig) {
 
   
   // Alias `layouts/post.njk` to `post`
-  eleventyConfig.addLayoutAlias("base", "layouts/base.liquid");
-  if(env == "development"){
+  if(env == "dev"){
+    console.log(`set for ${env}`);
+    eleventyConfig.addLayoutAlias("base", "layouts/base-preview.liquid");
     eleventyConfig.addLayoutAlias("post", "layouts/post-preview.liquid");
   }else {
+    console.log(`set for ${env}`);
+    eleventyConfig.addLayoutAlias("base", "layouts/base.liquid");
     eleventyConfig.addLayoutAlias("post", "layouts/post.liquid");
   }
 
@@ -34,8 +42,8 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj, {zone}).toISO();
   });
 
-  eleventyConfig.addFilter('toString', (html) => {
-    return html.toString();
+  eleventyConfig.addFilter('readableDateYearMonthDate', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {zone}).toFormat('yyyy MMM, d');
   });
 
   eleventyConfig.addFilter('jsonify', (object) => {
@@ -56,21 +64,13 @@ module.exports = function(eleventyConfig) {
 
    /* Begin Markdown Plugins */
    let markdownIt = require("markdown-it");
-   let markdownItAnchor = require("markdown-it-anchor");
    let markdownItAttrs = require("markdown-it-attrs");
    let options = {
      html: true,
      breaks: true,
      linkify: true
    };
-   let opts = {
-     permalink: true,
-     permalinkClass: "direct-link",
-     permalinkSymbol: "#"
-   };
- 
    eleventyConfig.setLibrary("md", markdownIt(options)
-     .use(markdownItAnchor, opts)
      .use(markdownItAttrs)
    );
    /* End Markdown Plugins */
@@ -79,7 +79,7 @@ module.exports = function(eleventyConfig) {
     dir: { input: 'src', output: 'dist', data: '_data', includes: "_template/_includes" },
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md', 'css', 'html', 'yml'],
-    htmlTemplateEngine: 'njk',
+    htmlTemplateEngine: 'liquid',
     // markdownTemplateEngine: 'njk',
   }
 }

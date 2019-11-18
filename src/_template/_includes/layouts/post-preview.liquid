@@ -2,19 +2,24 @@
 layout: base
 permalink: "posts/{{page.fileSlug }}/"
 ---
-<div class="page-container">
+
+<h2 class="preview-header">Mildronize: Preview Mode </h2>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/">posts</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+    </ol>
+  </nav>
+
 <section>
-  <center>
-    <h3 class="preview-header">-- Preview Mode --</h3>
-  </center>
+
  <div class="mt-5"></div>
 </section>
 <article>
   <h1>{{ title }}</h1>
   <p class="post-date">
-    {{ page.date | dateToISO }}
+    {{ page.date | readableDateYearMonthDate }}
     </p>
   {{ content }}
 </article>
-
-</div>

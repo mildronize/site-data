@@ -1,0 +1,11 @@
+---
+permalink: "tags/index.json"
+---
+[
+{% for tag in collections.tagList %}
+      {% if category != "posts" %}
+          { "name": "{{ tag }}", "slug": "{{ tag | url }}"}
+          {% unless forloop.last %},{% endunless %}
+      {% endif %}
+  {% endfor %}
+  ]

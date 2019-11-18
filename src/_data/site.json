@@ -1,5 +1,8 @@
 {
+    "title": "Mildronize's blog",
+    "url": "https://mildronize.com/",
+    "feed_path": "/feed/feed.xml",
     "image_prefix": "/static",
     "site_image_prefix": "/assets",
-    "preview_css": "https://mildronize.com/_next/static/css/commons.3a0e8139.chunk.css"
+    "preview_css": "https://mildronize.com/_next/static/css/commons.1b8f9af6.chunk.css"
 }

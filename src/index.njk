@@ -1,13 +1,19 @@
 ---
-layout: base
+layout: layouts/base-preview.liquid
 ---
 
+<h2 class="preview-header">Mildronize </h2>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Home</li>
+  </ol>
+</nav>
 
-<p>
-My home
-</p>
-
-<div>
-{% set postslist = collections.posts  %}
-{% include "components/posts-list.njk" %}
-</div>
+<ul>
+    <li>
+        <a href="/posts-preview/">Posts</a>
+    </li>
+    <li>
+        Pages
+    </li>
+</ul>

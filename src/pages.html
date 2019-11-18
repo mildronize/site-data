@@ -10,7 +10,7 @@ templateEngineOverride: liquid
     "date": "{{ post.date | dateToISO }}",
     "slug": "{{ post.fileSlug }}",
     "url": "{{ post.url  }}",
-    "content": {{post.templateContent | jsonify }}
+    "content": {{post.templateContent | toLazysizes | jsonify }}
     }
     {% unless forloop.last %},{% endunless %}
 {% endfor %}

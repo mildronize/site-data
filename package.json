@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "acorn": "^6.1.1",
+    "cheerio": "^1.0.0-rc.3",
     "cross-env": "^6.0.3"
   }
 }

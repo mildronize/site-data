@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const toLazysizes = require('./_11ty/lazysizes');
 const zone = 'Asia/Bangkok';
 
 module.exports = function(eleventyConfig) {
@@ -48,6 +49,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('jsonify', (object) => {
     return JSON.stringify(object);
+  });
+
+  eleventyConfig.addFilter('toLazysizes', (object) => {
+    return toLazysizes(object);
   });
 
 

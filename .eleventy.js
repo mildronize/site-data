@@ -55,12 +55,6 @@ module.exports = function(eleventyConfig) {
     return toLazysizes(object);
   });
 
-
-  eleventyConfig.addLiquidFilter('reverse', (array) => {
-    return array.reverse();
-  });
-
-
    // Get the first `n` elements of a collection.
    eleventyConfig.addFilter("head", (array, n) => {
     if( n < 0 ) {

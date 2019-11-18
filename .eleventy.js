@@ -66,6 +66,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
   eleventyConfig.addCollection("pages", require("./src/_11ty/getPageList"));
+  eleventyConfig.addCollection("reversedPosts", require("./src/_11ty/getPostListReverse"));
 
    /* Begin Markdown Plugins */
    let markdownIt = require("markdown-it");

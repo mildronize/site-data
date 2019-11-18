@@ -3,7 +3,7 @@ permalink: "posts.json"
 templateEngineOverride: liquid
 ---
 [
-{% for post in  collections.posts %}
+{% for post in  collections.reversedPosts %}
 
     {
     "title": "{{ post.data.title }}",

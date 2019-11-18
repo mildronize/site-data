@@ -1,5 +1,5 @@
 {
     "site_image_prefix": "/assets",
-    "image_prefix": "https://mildronize-data.netlify.com/static",
+    "image_prefix": "https://mildronize-data.netlify.com/images",
     "preview_css": "https://mildronize.com/_next/static/css/commons.3a0e8139.chunk.css"
 }

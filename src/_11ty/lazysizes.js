@@ -11,7 +11,7 @@ module.exports = function(html) {
     
     $('img').each(function(i, elem) {
       $(this)
-        .attr('data-src',$(this).attr('src'))
+        .attr('data-src',`https://ce8be7dec.cloudimg.io/bound/1000x1000/q60/${$(this).attr('src')}`)
         .removeAttr('src')
         .addClass('lazyload');
     });

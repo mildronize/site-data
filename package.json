@@ -16,6 +16,11 @@
     "dev:debug": "DEBUG=* npm run dev",
     "build": "run-s clean eleventy:default --print-label"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "curl -X POST -d {} https://api.netlify.com/build_hooks/5dd2e65267caf900d07d75d0"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://ianrose@github.com/ianrose/deventy.git"
@@ -30,6 +35,7 @@
     "@11ty/eleventy": "^0.9.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
+    "husky": "^3.1.0",
     "light-server": "^2.6.3",
     "luxon": "^1.12.0",
     "markdown-it": "^8.4.2",

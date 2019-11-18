@@ -1,5 +1,13 @@
 ---
+layout: base
 ---
 
 
+<p>
 My home
+</p>
+
+<div>
+{% set postslist = collections.posts  %}
+{% include "components/posts-list.njk" %}
+</div>

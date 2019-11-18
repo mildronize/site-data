@@ -4,15 +4,25 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const zone = 'Asia/Bangkok';
 
 module.exports = function(eleventyConfig) {
+  const env = process.env.ELEVENTY_ENV;
+
+  console.log(`Run with ${env}`);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.setDataDeepMerge(true);
   // Move images to dist folder without processing
   eleventyConfig.addPassthroughCopy({ "src/_template/assets": "assets" });
   eleventyConfig.addPassthroughCopy("src/static");
+
+  
   // Alias `layouts/post.njk` to `post`
   eleventyConfig.addLayoutAlias("base", "layouts/base.liquid");
-  eleventyConfig.addLayoutAlias("post", "layouts/post.liquid");
+  if(env == "development"){
+    eleventyConfig.addLayoutAlias("post", "layouts/post-preview.liquid");
+  }else {
+    eleventyConfig.addLayoutAlias("post", "layouts/post.liquid");
+  }
+
   eleventyConfig.addLayoutAlias("page", "layouts/page.liquid");
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string

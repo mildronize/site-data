@@ -1,11 +1,10 @@
-# Mildronize.com
+# Mildronize.com - data
 
-using `11ty` tools
+Starting dev
 
-#  mildronize
-
-A minimal 11ty starting point for building static websites with modern tools. Uses the CLI of each tool. Allowing a much easier upgrade path for each individual development tool.
-
+```
+$ yarn dev
+```
 
 ## Getting Started
 
@@ -13,18 +12,18 @@ Install all dependencies using npm:
 
 ```
 $ nvm use
-$ npm install
+$ yarn
 ```
 
 ### To Develop
 
 ```
-$ npm run dev
+$ yarn dev
 ```
  And in debug mode:
  
 ```
-$ npm run dev:debug
+$ yarn dev:debug
 ```
 
 You can view the website at the given access URL:
@@ -37,5 +36,5 @@ The local url is configured in `.lightserverrc`
 ### To Build
 
 ```
-npm run build
+yarn build
 ```

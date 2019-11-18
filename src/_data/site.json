@@ -1,8 +1,0 @@
-{
-    "title": "Mildronize's blog",
-    "url": "https://mildronize.com/",
-    "feed_path": "/feed/feed.xml",
-    "image_prefix": "https://mildronize-data.netlify.com/static",
-    "site_image_prefix": "/assets",
-    "preview_css": "https://mildronize.com/_next/static/css/commons.3a0e8139.chunk.css"
-}

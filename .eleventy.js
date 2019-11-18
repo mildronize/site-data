@@ -87,7 +87,7 @@ module.exports = function(eleventyConfig) {
    /* End Markdown Plugins */
 
   return {
-    dir: { input: './', output: 'dist', data: 'src/_data', includes: "src/_template/_includes" },
+    dir: { input: './', output: 'dist', data: '_data', includes: "src/_template/_includes" },
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md', 'css', 'html', 'yml'],
     htmlTemplateEngine: 'liquid',

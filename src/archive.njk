@@ -1,0 +1,12 @@
+---
+layout: page
+tags:
+  - nav
+navtitle: Archive
+permalink: /blog/
+---
+
+<h1 class="page-title">Archive</h1>
+
+{% set postslist = collections.posts %}
+{% include "components/posts-list.njk" %}

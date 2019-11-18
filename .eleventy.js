@@ -1,7 +1,7 @@
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const toLazysizes = require('./_11ty/lazysizes');
+const toLazysizes = require('./src/_11ty/lazysizes');
 const zone = 'Asia/Bangkok';
 
 module.exports = function(eleventyConfig) {
@@ -56,7 +56,7 @@ module.exports = function(eleventyConfig) {
   });
 
 
-  eleventyConfig.addFilter('reverse', (array) => {
+  eleventyConfig.addLiquidFilter('reverse', (array) => {
     return array.reverse();
   });
 
@@ -70,8 +70,8 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, n);
   });
 
-  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
-  eleventyConfig.addCollection("pages", require("./_11ty/getPageList"));
+  eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
+  eleventyConfig.addCollection("pages", require("./src/_11ty/getPageList"));
 
    /* Begin Markdown Plugins */
    let markdownIt = require("markdown-it");
@@ -87,7 +87,7 @@ module.exports = function(eleventyConfig) {
    /* End Markdown Plugins */
 
   return {
-    dir: { input: 'src', output: 'dist', data: '_data', includes: "_template/_includes" },
+    dir: { input: './', output: 'dist', data: 'src/_data', includes: "src/_template/_includes" },
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md', 'css', 'html', 'yml'],
     htmlTemplateEngine: 'liquid',

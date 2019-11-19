@@ -27,7 +27,7 @@ templateEngineOverride: liquid
         {% endfor %}
     ],
     "excerpt": {{post.templateContent | strip_newlines | strip_html | truncate: 300 | jsonify }},
-    "content": {{post.templateContent | toLazysizes | jsonify }}
+    "content": {{post.templateContent | convertImageLocation | toLazysizes | jsonify }}
     }
     {% unless forloop.last %},{% endunless %}
 {% endfor %}

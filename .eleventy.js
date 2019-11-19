@@ -2,6 +2,7 @@ const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const toLazysizes = require('./src/_11ty/lazysizes');
+const convertImageLocation = require('./src/_11ty/getImageLocation.js');
 const zone = 'Asia/Bangkok';
 
 module.exports = function(eleventyConfig) {
@@ -51,8 +52,12 @@ module.exports = function(eleventyConfig) {
     return JSON.stringify(object);
   });
 
-  eleventyConfig.addFilter('toLazysizes', (object) => {
-    return toLazysizes(object);
+  eleventyConfig.addFilter('toLazysizes', (htmlString) => {
+    return toLazysizes(htmlString);
+  });
+
+  eleventyConfig.addFilter('convertImageLocation', (htmlString) => {
+    return convertImageLocation(htmlString);
   });
 
    // Get the first `n` elements of a collection.

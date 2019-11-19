@@ -21,5 +21,5 @@ permalink: "posts/{{page.fileSlug }}/"
   <p class="post-date">
     {{ page.date | readableDateYearMonthDate }}
     </p>
-  {{ content }}
+  {{ content | convertImageLocation }}
 </article>

@@ -22,5 +22,5 @@ permalink: "posts/{{page.fileSlug }}.json"
     {% endif %}
 {% endfor %}
     ],
-  "content": {{ content | jsonify }}
+  "content": {{ content | convertImageLocation | toLazysizes | jsonify }}
 }

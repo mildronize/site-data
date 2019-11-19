@@ -14,7 +14,7 @@ featured_image: logo/virtual.png
 > สำหรับคนที่ใช้ windows โปรแกรมที่แนะนำสำหรับการใช้ ssh คือ [Putty](http://www.putty.org/) ครับ
 
 ## วิธีการใช้งานด้วย GUI
-![GUI mode for starting virtualbox vm in headless mode]({{site.image_prefix}}/2016-06-27-starting-vitualbox-vm-with-headless-mode.jpg)
+![GUI mode for starting virtualbox vm in headless mode](../images/2016-06-27-starting-vitualbox-vm-with-headless-mode.jpg)
 
 ## วิธีการใช้ผ่าน Command Line (CLI)
 > สำหรับคนที่ใช้ Windows ให้ใช้ path เต็มๆ ของ Virtualbox แทน หรือตั้งค่า variable environment ก็ได้ เช่น `"C:\Program Files\Oracle\VirtualBox\VBoxManage"`

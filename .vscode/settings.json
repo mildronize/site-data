@@ -1,4 +1,6 @@
+
 {
+    "markdown.styles": ["src/preview-styles.css"],
     "files.exclude": {
         "**/.vscode": true,
         "**/dist": true,

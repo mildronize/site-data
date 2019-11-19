@@ -50,9 +50,15 @@ Available on GitHub via <https://github.com/mildronize/R2ALS> and <https://githu
 
 ----
 
-## Blog Development
+## Changelog
 
-Welcome to my site v.4.0.0
+Welcome to my site v.4.0.0-beta
+
+Currenlt beta:
+
+- no feed.xml
+- no image zoom
+- no search page
 
 <ul class="about-contact">
 <li>

@@ -91,6 +91,6 @@ José's post](https://jmperezperez.com/medium-image-progressive-loading-placehol
 
 ##### Build Status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c4bdd413-2764-44f3-8ba2-ac8326a4971e/deploy-status)](https://app.netlify.com/sites/mildronize/deploys)
+[site status](/status)
 
 The old version? Read [the old site development log]({{ site.post_prefix }}/my-blog-development/)

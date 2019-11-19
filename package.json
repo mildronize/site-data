@@ -1,7 +1,7 @@
 {
-  "name": "deventy_mildronize",
+  "name": "site_data",
   "version": "1.2.3",
-  "description": "An 11ty starter blog with modern tools",
+  "description": "site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,37 +14,25 @@
     "dev": "npm-run-all clean eleventy:default --parallel eleventy:watch serve --print-label",
     "dev-json": "npm-run-all clean eleventy:dev --parallel eleventy:watch:json serve --print-label",
     "dev:debug": "DEBUG=* npm run dev",
-    "build": "run-s clean eleventy:default --print-label"
+    "build-hook": "curl -X POST -d {} https://api.netlify.com/build_hooks/5dd2e65267caf900d07d75d0",
+    "delay": "delay 20",
+    "build": "run-s clean eleventy:default delay build-hook --print-label"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "curl -X POST -d {} https://api.netlify.com/build_hooks/5dd2e65267caf900d07d75d0"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://ianrose@github.com/ianrose/deventy.git"
-  },
-  "author": "",
+  "author": "Thada Wangthammang",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ianrose/deventy/issues"
-  },
-  "homepage": "https://github.com/ianrose/deventy#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.7",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
-    "husky": "^3.1.0",
+    "cross-env": "^6.0.3",
+    "delay-cli": "^1.1.0",
     "light-server": "^2.6.3",
-    "luxon": "^1.12.0",
-    "markdown-it": "^8.4.2",
-    "markdown-it-attrs": "^3.0.1",
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {
-    "acorn": "^6.1.1",
+    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "cheerio": "^1.0.0-rc.3",
-    "cross-env": "^6.0.3"
+    "luxon": "^1.12.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-attrs": "^3.0.1"
   }
 }

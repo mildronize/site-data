@@ -14,7 +14,7 @@
     "dev": "npm-run-all clean eleventy:default --parallel eleventy:watch serve --print-label",
     "dev-json": "npm-run-all clean eleventy:dev --parallel eleventy:watch:json serve --print-label",
     "dev:debug": "DEBUG=* npm run dev",
-    "build-hook": "curl -X POST -d {} https://api.netlify.com/build_hooks/5dd2e65267caf900d07d75d0",
+    "build-hook": "curl -X POST -d {} https://api.netlify.com/build_hooks/5dd41f11ded796884d3c91ce",
     "delay": "delay 20",
     "build": "run-s clean eleventy:default delay build-hook --print-label"
   },

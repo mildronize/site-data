@@ -59,6 +59,7 @@ Currenlt beta:
 - no feed.xml
 - no image zoom
 - no search page
+- Not enough quality of SEO ( Search engine friendly, and social media)
 
 <ul class="about-contact">
 <li>

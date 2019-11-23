@@ -1,12 +1,12 @@
 ---
 layout: post
 title: วิธีการรัน JavaScript ข้างนอก Bundle ของ Webpack และการเรียกใช้ jQuery ภายใน Webpack
+categories: [Web]
 tags:	
 - webpack
 - vanilla
 - javascript
 - jquery
-language: th
 ---
 
 สวัสดีครับ วันนี้ผมจะมาแบ่งปันเรื่องการตั้งค่าการใช้งาน Webpack เบื้องต้น และน่าจะเป็นคำถามและข้อสงสัยสำหรับคนที่หัดใช้ครับ

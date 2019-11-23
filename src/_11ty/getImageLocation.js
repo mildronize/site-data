@@ -5,6 +5,10 @@ const isUrl = require("is-url");
 // use before Laysizes only
 
 const getImageLocation = function (html) {
+
+    const env = process.env.ELEVENTY_ENV;
+    const prefix_url = env == "dev"?"/images":"https://mildronize-data.netlify.com/images";
+
     const $ = cheerio.load(html,{
         xmlMode: true,
         decodeEntities: false
@@ -14,11 +18,13 @@ const getImageLocation = function (html) {
         
         const src = $(this).attr('src');
         if(isUrl(src))return;
-        const prefix_url = src.split("../images");
-        const image_name = prefix_url[1];
+        // const prefix_url = src.split("../images");
+        // const image_name = prefix_url[1];
+       
+        const image_name = "/" + src;
         
       $(this)
-        .attr('src',`https://mildronize-data.netlify.com/images${image_name}`)
+        .attr('src',`${prefix_url}${image_name}`);
     });
 
     return $.html({ decodeEntities: false });

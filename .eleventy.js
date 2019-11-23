@@ -19,8 +19,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
   // Move images to dist folder without processing
   eleventyConfig.addPassthroughCopy({ "src/_template/assets": "assets" });
-  eleventyConfig.addPassthroughCopy("images");
-
+  eleventyConfig.addPassthroughCopy({ "posts/**/*.jpg" : "images"} );
+  eleventyConfig.addPassthroughCopy({ "posts/**/*.png" : "images"} );
+  eleventyConfig.addPassthroughCopy({ "posts/**/*.gif" : "images"} );
   
   // Alias `layouts/post.njk` to `post`
   if(env == "dev"){

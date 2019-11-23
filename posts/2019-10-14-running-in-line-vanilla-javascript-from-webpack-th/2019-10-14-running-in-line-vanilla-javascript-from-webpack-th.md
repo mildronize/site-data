@@ -21,7 +21,7 @@ tags:
 
 Webpack พูดง่ายๆ ก็คือการที่รวมโค๊ดเราที่เป็นหลายๆ ไฟล์ ซึ่งจัดเรียงการให้สามารถ Maintainance ได้ง่าย มารวมกันใน 1 Bundle หรือ หลาย Bundle ก็ได้ (ซึ่ง Bundle ก็คือไฟล์ JS ไฟล์ 1 ไฟล์นั้นเอง) เพื่อให้ง่ายต่อการนำไปใช้ และจัดการ
 
-![Webpack Diagram from https://webpack.js.org/]({{ site.image_prefix}}/2019-10-14-running-in-line-vanilla-javascript-from-webpack-2.png)
+![Webpack Diagram from https://webpack.js.org/](2019-10-14-running-in-line-vanilla-javascript-from-webpack-2.png)
 
 หลายๆ คนอาจจะสงสัยว่า ในเมื่อ React ก็มี [create-react-app](https://github.com/facebook/create-react-app) หรือเครื่องมืออื่นที่สามารถสร้างเว็บได้เลย โดยไม่ต้องตั้งค่า Webpack อะไรเลย แล้วเมื่อไหร่เราควรจะใช้ Webpack
 
@@ -124,7 +124,7 @@ let hello = (name) => {
 
 นี้คือตัวอย่างการทำงาน
 
-![webpack]({{ site.image_prefix }}/2019-10-14-running-in-line-vanilla-javascript-from-webpack.png)
+![webpack](2019-10-14-running-in-line-vanilla-javascript-from-webpack.png)
 
 
 เพื่อเข้าใจมากขึ้นสามารถเข้าไปดู source ได้ที่ <https://github.com/mildronize/webpack-with-vanilla-js> ได้เลยครับ

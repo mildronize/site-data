@@ -14,7 +14,7 @@ permalink: "posts/{{page.fileSlug }}.json"
             {% endif %}
         {% endfor %}
     ],
-    "tags": [  
+    "tags": [
     {% for tag in tags %}
     {% if tag != "posts" %}
         { "name": "{{ tag }}", "slug": "{{ tag | url }}"}
@@ -22,5 +22,5 @@ permalink: "posts/{{page.fileSlug }}.json"
     {% endif %}
 {% endfor %}
     ],
-  "content": {{ content | convertImageLocation | toLazysizes | jsonify }}
+  "content": {{ content | convertImageLocation | jsonify }}
 }

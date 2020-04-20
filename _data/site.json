@@ -2,7 +2,7 @@
     "assets_prefix": "/assets",
     "post_prefix": "/b",
     "page_prefix": "/p",
-    "image_prefix": "https://mildronize-data.netlify.com/images",
+    "image_prefix": "https://mildronize-data.netlify.app/images",
     "preview_css": "https://mildronize.com/_next/static/css/commons.3a0e8139.chunk.css",
     "contacts": {
         "twitter": "https://twitter.com/mildronize",

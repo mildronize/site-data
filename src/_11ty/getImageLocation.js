@@ -6,7 +6,7 @@ const isUrl = require("is-url");
 const getImageLocation = function(html) {
   const env = process.env.ELEVENTY_ENV;
   const prefix_url =
-    env == "dev" ? "/images" : "https://mildronize-data.netlify.com/images";
+    env == "dev" ? "/images" : "https://mildronize-data.netlify.app/images";
 
   const newImgTags = [];
   var allImgTags = html.match(/<\s*img[^>]*>(.*?)/g);

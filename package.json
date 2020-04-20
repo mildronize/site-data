@@ -1,6 +1,5 @@
 {
   "name": "site_data",
-  "version": "1.2.3",
   "description": "site",
   "main": "index.js",
   "scripts": {

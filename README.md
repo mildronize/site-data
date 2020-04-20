@@ -1,5 +1,8 @@
 # Mildronize.com - data
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/99ea2040-2728-4b09-860b-f3b3f49edd72/deploy-status)](https://app.netlify.com/sites/mildronize-data/deploys)
+[![David](https://img.shields.io/david/mildronize/site-data)](https://david-dm.org/mildronize/site-data)
+
 Starting dev
 
 ```

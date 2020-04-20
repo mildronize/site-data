@@ -22,7 +22,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "posts/**/*.jpg" : "images"} );
   eleventyConfig.addPassthroughCopy({ "posts/**/*.png" : "images"} );
   eleventyConfig.addPassthroughCopy({ "posts/**/*.gif" : "images"} );
-  
+  // netlify config
+  eleventyConfig.addPassthroughCopy({ "_headers" : "_headers"} );
+
   // Alias `layouts/post.njk` to `post`
   if(env == "dev"){
     console.log(`set for ${env}`);

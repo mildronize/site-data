@@ -3,7 +3,7 @@
     "post_prefix": "/b",
     "page_prefix": "/p",
     "image_prefix": "https://mildronize-data.netlify.app/images",
-    "preview_css": "https://mildronize.com/_next/static/css/commons.3a0e8139.chunk.css",
+    "preview_css": "/preview-styles.css",
     "contacts": {
         "twitter": "https://twitter.com/mildronize",
         "github": "https://github.com/mildronize",
